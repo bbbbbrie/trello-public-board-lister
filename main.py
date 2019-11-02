@@ -21,7 +21,7 @@ def get_public_trello_boards(user_name, api_key, api_token):
             loguru.logger.info("Writing down the public Trello boards for {} in {}", user_name, full_path, level="INFO")
             trello_boards_file.write(trello_boards)
     else:
-        loguru.logger.debug("No public trello boards for {}", user_name, level="DEBUG")
+        loguru.logger.debug("No public Trello boards for {}", user_name, level="DEBUG")
 
 
 def main(user_name_list, api_key, api_token):
