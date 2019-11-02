@@ -25,7 +25,7 @@ def get_public_trello_boards(user_name, api_key, api_token):
 
 
 def main(user_name_list, api_key, api_token):
-    for trello_user in user_name_list:
+    for trello_user in set(user_name_list):
         get_public_trello_boards(trello_user, api_key, api_token)
 
 
