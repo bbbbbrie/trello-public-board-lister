@@ -1,6 +1,6 @@
 # Trello Public Board Lister
 
-A quick Python program that I wrote to list all public Trello boards given a file containing Trello usernames one-per-line. You will need to `pip install loguru`. This has been tested with Python 3.7. 
+A quick Python program that I wrote to list all public Trello boards given a file containing Trello usernames one-per-line. You should get a Trello API key and token and `pip install -r requirements.txt` in order to follow along. You can pass your API key and token at the command line or set them in your environment variables. This has been tested with Python 3.7. 
 
 ## Usage
 Put the usernames that you care about in a file in this directory called `trello-usernames.txt`. 
