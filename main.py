@@ -31,11 +31,9 @@ def get_api_keys_from_environment():
 
 
 def main(user_name_list, api_key, api_token):
-    if not api_key:
-        loguru.logger.error("No API key at the CLI; checking environment variables")
-        if not api_token:
-            loguru.logger.error("No API key at the CLI; checking environment variables")
-            api_key, api_token = get_api_keys_from_environment()
+    if not (api_key and api_token):
+        loguru.logger.error("No API key and token at the CLI; checking environment variables")
+        api_key, api_token = get_api_keys_from_environment()
     for trello_user in set(user_name_list):
         get_public_trello_boards(trello_user, api_key, api_token)
 
