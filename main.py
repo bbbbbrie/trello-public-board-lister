@@ -24,7 +24,18 @@ def get_public_trello_boards(user_name, api_key, api_token):
         loguru.logger.debug("No public Trello boards for {}", user_name, level="DEBUG")
 
 
+def get_api_keys_from_environment():
+    api_key = os.getenv('TRELLO_API_KEY')
+    api_token = os.environ.get('TRELLO_API_PASSWORD')
+    return(api_key, api_token)
+
+
 def main(user_name_list, api_key, api_token):
+    if not api_key:
+        loguru.logger.error("No API key at the CLI; checking environment variables")
+        if not api_token:
+            loguru.logger.error("No API key at the CLI; checking environment variables")
+            api_key, api_token = get_api_keys_from_environment()
     for trello_user in set(user_name_list):
         get_public_trello_boards(trello_user, api_key, api_token)
 
