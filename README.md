@@ -1,5 +1,7 @@
 # Trello Public Board Lister
 
+![GitHub last commit](https://img.shields.io/github/last-commit/bbbbbrie/trello-public-board-lister?style=for-the-badge) | ![GitHub Repo stars](https://img.shields.io/github/stars/bbbbbrie/trello-public-board-lister?style=for-the-badge)
+
 A quick Python program that I wrote to list all public Trello boards given a file containing Trello usernames one-per-line. You should get a Trello API key and token and `pip install -r requirements.txt` in order to follow along. You can pass your API key and token at the command line or set them in your environment variables:
 
   * `export TRELLO_API_KEY=yourtrelloapikey`
