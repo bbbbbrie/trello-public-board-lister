@@ -40,6 +40,11 @@ def count_the_boards(json_body):
     return number_of_boards
 
 
+def test_get_trello_api_end_point_200():
+    response = requests.get("http://api.trello.com")
+    assert response.status_code == 200
+
+
 def main(user_name_list, api_key, api_token):
     if not (api_key and api_token):
         loguru.logger.error("No API key and token at the CLI; checking environment variables")
