@@ -10,6 +10,14 @@ A quick Python program that I wrote to list all public Trello boards given a fil
 
 This has been tested with Python 3.7. 
 
+## Get a Trello API key and token
+You will need a Trello API key and token. 
+
+  1. Log in to [Trello](https://trello.com)
+  1. Go to [https://trello.com/app-key](https://trello.com/app-key)
+  1. Follow the prompts
+  1. Record the key and token 
+
 ## Usage
 Put the usernames that you care about in a file in this directory called `trello-usernames.txt`. 
 
